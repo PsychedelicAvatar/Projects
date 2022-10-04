@@ -1,0 +1,19 @@
+**** No. Of  Flights Cancelled  in  Each Month  from 2018.
+
+SELECT   MONTH,  COUNT  (CANCELLED)  AS TOTAL_CANCELLED FROM Hive_Parquet WHERE CANCELLED = 1 GROUP BY  MONTH ORDERED BY  MONTH LIMIT 50; 
+
+
+****No.  Of  Flights Detoured  in Each  Month from 2018
+
+SELECT  MONTH, COUNT  (DIVERTED)  AS TOTAL_DIVERTED FROM Hive_Parquet WHERE DIVERTED = 1 GROUP BY  MONTH ORDER BY  MONTH LIMIT  50;
+
+
+****No. Of Flights  canceled  from origin by op_carriers fights in Each Year from 2018.
+select orgin, count(cancelled), op_carriers from Hive_parquet group by origin, op_carriers;
+
+
+
+
+
+pickleing  --> converting object to binary file format and store as a file.
+unpickleing --> binary file format converting to object called pickeling.
